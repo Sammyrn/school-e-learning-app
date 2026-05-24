@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+* { box-sizing: border-box; }
+
+:root {
+  --sun: #FFB800;
+  --sun-light: #FFF3CC;
+  --leaf: #2ECC71;
+  --leaf-dark: #1a9e56;
+  --sky: #3BB4F2;
+  --coral: #FF6B6B;
+  --violet: #A78BFA;
+  --cream: #FFFBF0;
+  --ink: #1A1A2E;
+  --radius: 20px;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--cream);
+  color: var(--ink);
+}
+
+.font-display { font-family: 'Fredoka One', cursive; }
+
+/* Bouncy button press */
+.btn-bounce {
+  transition: transform 0.12s cubic-bezier(.36,.07,.19,.97), box-shadow 0.12s ease;
+}
+.btn-bounce:hover  { transform: translateY(-3px) scale(1.03); }
+.btn-bounce:active { transform: translateY(1px)  scale(0.97); }
+
+/* Wobble on hover */
+@keyframes wobble {
+  0%,100% { transform: rotate(0deg); }
+  25%      { transform: rotate(-4deg); }
+  75%      { transform: rotate(4deg); }
+}
+.hover-wobble:hover { animation: wobble 0.4s ease; }
+
+/* Float animation for hero elements */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+.float { animation: float 3s ease-in-out infinite; }
+.float-slow { animation: float 4.5s ease-in-out infinite; }
+
+/* Confetti dot pattern overlay */
+.dots-bg {
+  background-image: radial-gradient(circle, #FFB80022 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Card pop effect */
+.card-pop {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-pop:hover {
+  transform: translateY(-6px) rotate(-0.5deg);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+/* Fade-in-up entrance */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up { animation: fadeInUp 0.5s ease both; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }

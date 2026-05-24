@@ -1,0 +1,72 @@
+/* Styles for About page */
+.about-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.about-title {
+  font-size: 2.25rem;
+  margin: 0.5rem 0 1.25rem 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-text {
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.school-name {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.lead {
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.about-text h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-media .image-placeholder {
+  background: #e5e7eb;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.quick-facts {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.quick-facts li {
+  background: #fbfbfd;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-media {
+    margin-top: 1rem;
+  }
+}
